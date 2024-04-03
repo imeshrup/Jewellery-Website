@@ -86,3 +86,21 @@
         font-size: 18px;
     }
 }
+
+
+
+
+.hero-right img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .hero-right img.active {
+    opacity: 1;
+  }
+  
+  .hero-right img.previous {
+    opacity: 0;
+  }
+  

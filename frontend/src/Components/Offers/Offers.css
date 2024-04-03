@@ -3,7 +3,7 @@
     height: 60vh;
     display: flex;
     margin: auto;
-    margin-top: 300px;
+    margin-top: 200px;
     padding: 0px 140px;
     margin-bottom: 150px;
     background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
@@ -53,3 +53,22 @@
     margin-top: 70px;
     width: 280px;
 }
+
+
+
+
+
+.offers-right img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .offers-right img.active {
+    opacity: 1;
+  }
+  
+  .offers-right img.previous {
+    opacity: 0;
+  }
+  
