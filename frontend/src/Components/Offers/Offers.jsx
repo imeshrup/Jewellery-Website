@@ -27,7 +27,7 @@ const Offers = () => {
     <div className='offers'>
       <div className="offers-left">
         <h1>EXCLUSIVE</h1>
-        <h1>offers for you</h1>
+        <h1>Offers for you</h1>
         <p>ONLY BEST SELLER PRODUCTS</p>
         <button>Check Now</button>
       </div>
