@@ -1,13 +1,13 @@
 .item {
-    width: 100%; /* Set width to 100% for responsiveness */
-    max-width: 300px; /* Limit maximum width to 300px */
+    width: 100%; 
+    max-width: 280px;
 }
 
 .item img {
     margin-left: 10px;
     margin-right: 10px;
-    width: 100%; /* Set image width to 100% for responsiveness */
-    max-width: 250px; /* Limit maximum width to 250px */
+    width: 100%; 
+    max-width: 250px; 
 }
 
 .item p {
@@ -37,15 +37,59 @@
     transition: 0.6s;
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
+@media(max-width: 1280px){
+    .item{
+        width: 220px;
+        font-size: 14px;
+    }
+    
+    .item img{
+        width: 220px;
+    }
+
+    .item-prices-old{
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 1024px){
+    .item{
+        width: 170px;
+        font-size: 13px;
+    }
+
+    .item img{
+        width: 170px;
+    }
+
+    .item-prices-old{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 800px) {
     .item {
-        width: 100%; /* Set width to 100% for responsiveness */
-        max-width: none; /* Remove maximum width */
+        width: 100%; 
+        max-width: none;
+        font-size: 12px;
     }
 
     .item img {
-        width: 100%; /* Set image width to 100% for responsiveness */
-        max-width: none; /* Remove maximum width */
+        width: 100%;
+        max-width: none;
+    }
+
+    .item-prices-old{
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 500px){
+    .item{
+        width: 160px;
+    }
+
+    .item img{
+        width: 160px;
     }
 }
