@@ -1,62 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import './Hero.css';
-import hand_icon from '../Assets/hand_icon.png';
-import arrow_icon from '../Assets/arrow.png';
-import hero_image from '../Assets/hero_image.png';
+import kids from '../Assets/banner_kids.png';
+import women from '../Assets/banner_women.png';
+import mens from '../Assets/banner_mens.png';
 
 const Hero = () => {
-  const images = [
-    "https://sathiesjewellery.com/admin/ajax/images/PD0003546_65e6c2b6c7f4a.jpg",
-    "https://sathiesjewellery.com/admin/ajax/images/PD0003545_65e6c25d5bc52.jpg",
-    "https://sathiesjewellery.com/admin/ajax/images/PD0003544_65e6c1d2692f4.jpg",
-  ];
+    const images = [
+        { src: kids, text: 'Kids Offer', buttonText: 'Shop Now' },
+        { src: women, text: 'Women Offer', buttonText: 'Explore' },
+        { src: mens, text: 'Men Offer', buttonText: 'View Collection' },
+    ];
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [previousImageIndex, setPreviousImageIndex] = useState(images.length - 1);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPreviousImageIndex(currentImageIndex);
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex(prevIndex =>
+                prevIndex === images.length - 1 ? 0 : prevIndex + 1
+            );
+        }, 3000);
 
-    return () => clearInterval(interval);
-  }, [currentImageIndex, images.length]);
+        return () => clearInterval(interval);
+    }, [images.length]);
 
-  return (
-    <div className='hero'>
-      <div className="hero-left">
-        <h2>New Arrivals</h2>
-        <div>
-          <div className="hero-hand-icon">
-            <p>New</p>
-            <img src={hand_icon} alt="" />
-          </div>
-          <p>Collections</p>
-          <p>For Everyone</p>
+    return (
+        <div className='slider'>
+            {images.map((image, index) => (
+                <div key={index} className={`slider-item ${index === currentImageIndex ? 'active' : ''}`}>
+                    <img src={image.src} alt={`Offer ${index}`} />
+                    <div className="text-container">
+                        <h2>{image.text}</h2>
+                        <button>{image.buttonText}</button>
+                    </div>
+                </div>
+            ))}
         </div>
-        <div className="hero-latest-btn">
-          <div>Latest Collection</div>
-          <img src={arrow_icon} alt="" />
-        </div>
-      </div>
-      <div className="hero-right">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Image ${index}`}
-            className={`
-              ${index === currentImageIndex ? 'active' : ''}
-              ${index === previousImageIndex ? 'previous' : ''}
-            `}
-          />
-        ))}
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Hero;

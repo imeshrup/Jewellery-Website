@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './Offers.css';
-import exclusive_image from '../Assets/exclusive_image.png';
 
 const Offers = () => {
   const images = [
