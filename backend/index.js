@@ -217,7 +217,7 @@ app.get('/newcollections',async (req,res)=>{
 
 app.get('/popularinrings',async (req,res)=>{
     let products = await Product.find({category:"rings"});
-    let popular_in_rings = products.slice(0,4);
+    let popular_in_rings = products.slice(0,8);
     console.log("Popular in rings fetched");
     res.send(popular_in_rings)    
 })
