@@ -5,6 +5,7 @@ import cart_icon from '../Assets/cart_icon.png';
 import dropdown from '../Assets/dropdown.jpg';
 import { Link } from 'react-router-dom';
 import { ShopContext } from '../../Context/ShopContext';
+import TopNavbar from '../TopNavBar/TopNavBar';
 
 const Navbar = () => {
 
@@ -19,6 +20,7 @@ const Navbar = () => {
 
     return (
         <div className='navbar'>
+            <TopNavbar/>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="nav-logo">
                     <img src={logo} alt="" />

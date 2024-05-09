@@ -22,10 +22,26 @@
 .popular-item{
     margin-top: 50px;
     display: flex;
+    width: 900px;
     gap: 30px;
+    overflow-x: scroll;
 }
 
+.popular-item::-webkit-scrollbar{
+    display: none;
+}
 
+.scroll{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#next, #prev{
+    width: 30px;
+    cursor: pointer;
+    margin: 20px;
+}
 
 @media(max-width: 1280px){
     .popular{

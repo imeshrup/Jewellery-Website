@@ -1,0 +1,27 @@
+/* TopNavbar.css */
+
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Adjust background color as needed */
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Add border bottom for separation */
+    z-index: 999; /* Lower than Navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gold-price {
+    font-size: 16px;
+}
+
+.additional-options {
+    display: flex;
+}
+
+.additional-options p {
+    margin-right: 10px; /* Adjust spacing between options */
+}

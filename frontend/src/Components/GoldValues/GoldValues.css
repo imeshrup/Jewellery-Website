@@ -1,0 +1,21 @@
+.gold-values {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .gold-values h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .gold-values p {
+    font-size: 1.2rem;
+  }
+  
+  .gold-values p.loading {
+    font-style: italic;
+  }
+  
