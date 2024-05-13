@@ -30,6 +30,7 @@ const Hero = () => {
                     <img src={image.src} alt={`Offer ${index}`} />
                     <div className="text-container">
                         <h2>{image.text}</h2>
+                        {/* <h2 className="banner-text">{image.text}</h2> */}
                         <button>{image.buttonText}</button>
                     </div>
                 </div>
