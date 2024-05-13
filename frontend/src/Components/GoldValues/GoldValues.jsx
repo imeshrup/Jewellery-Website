@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/*import React, { useState, useEffect } from 'react';
 import './GoldValues.css';
 
 const GoldValues = () => {
@@ -19,6 +19,7 @@ const GoldValues = () => {
         console.error('Error fetching gold price:', error);
       }
     };
+    */
 
     // Call the fetch function
     fetchGoldPrice();
