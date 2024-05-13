@@ -19,7 +19,7 @@ const GoldValues = () => {
         console.error('Error fetching gold price:', error);
       }
     };
-    */
+    
 
     // Call the fetch function
     fetchGoldPrice();
@@ -44,3 +44,5 @@ const GoldValues = () => {
 };
 
 export default GoldValues;
+
+*/
